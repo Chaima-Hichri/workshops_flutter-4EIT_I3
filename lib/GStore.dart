@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:workshop_flutter__4ei3/CardFilmItem.dart';
 class GStore extends StatefulWidget {
   const GStore({super.key});
 
@@ -18,66 +19,10 @@ class _GStoreState extends State<GStore> {
       body:SingleChildScrollView(
         child: Column(
           children: [
-            Card(
-              child:Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Column(
-                  children: [
-                    Image.asset("assets/images/iceroad.jpg"),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text("Ice Road",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-                          Icon(Icons.star,color: Colors.amber,size: 27,)
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ) ,
-            ),
-            Card(
-              child:Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Column(
-                  children: [
-                    Image.asset("assets/images/thegrudge.jpg"),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text("The Grudge",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-                          Icon(Icons.star,color: Colors.amber,size: 27,)
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ) ,
-            ),
-            Card(
-              child:Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Column(
-                  children: [
-                    Image.asset("assets/images/HouseOfDead.jpg"),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text("House Of Dead",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-                          Icon(Icons.star,color: Colors.amber,size: 27,)
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ) ,
-            )
+            CardFilmItem(image: "iceroad.jpg", title: "Ice Road"),
+            CardFilmItem(image: "thegrudge.jpg", title: "The grudge"),
+            CardFilmItem(image: "HouseOfDead.jpg", title: "House Of Dead")
+
           ],
         ),
       ) ,
