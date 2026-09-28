@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-class CardFilmItem extends StatelessWidget {
-  String image,title;
-   CardFilmItem({super.key,required this.image,required this.title});
+class itemListViewFilm extends StatelessWidget {
+  final String image,title;
+  const itemListViewFilm({super.key,required this.image,required this.title});
 
   @override
   Widget build(BuildContext context) {
