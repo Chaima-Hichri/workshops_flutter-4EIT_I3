@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+
+import '../models/Film.dart';
 class Details extends StatefulWidget {
-  const Details({super.key});
+  final  Film film;
+  const Details({super.key,required this.film});
 
   @override
   State<Details> createState() => _DetailsState();

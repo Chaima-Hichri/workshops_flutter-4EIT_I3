@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:workshop_flutter__4ei3/widgets/itemListViewFilm.dart';
 
 import '../models/Film.dart';
+import 'Details.dart';
 class GStoreListView extends StatefulWidget {
   const GStoreListView({super.key});
 
@@ -27,7 +28,11 @@ class _GStoreListViewState extends State<GStoreListView> {
       body:ListView.builder(
           itemCount: films.length,
           itemBuilder: (context,index){
-          return itemListViewFilm(image:films[index].image , title: films[index].title);
+          return InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Details(film: films[index])));
+              },
+              child: itemListViewFilm(title: films[index].title, image: films[index].image));
           })
     );
   }
